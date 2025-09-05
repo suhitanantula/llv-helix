@@ -1,0 +1,22 @@
+{
+  "name": "@loopa-vibes/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Lines Loops Vibes - iterative thinking and problem-solving framework",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "loops",
+    "vibes",
+    "iterative-thinking"
+  ],
+  "author": "Inspired by Suhit Anantula's methodologies",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
