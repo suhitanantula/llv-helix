@@ -47,15 +47,22 @@ Jump-start transformation with expert-designed flows:
 - **📖 Narrative Strategy**: Storytelling that drives action
 - **🎨 Creative Intelligence**: Artistic and design innovation
 
-## Installation
+## 🚀 Quick Installation
 
 ```bash
-# Install MCP SDK dependency
-npm install @modelcontextprotocol/sdk
+# Clone and setup
+git clone https://github.com/thegreenguy1012/LLV-MCP.git
+cd LLV-MCP
+npm install
 
 # Add to Claude Code
-claude mcp add lines-loops-vibes node -- /path/to/index.js
+claude mcp add llv-framework node -- $(pwd)/index.js
+
+# Test the installation
+npm run demo
 ```
+
+**→ [Complete Installation Guide](INSTALLATION.md)** - Detailed setup instructions and troubleshooting
 
 ## Available Tools
 

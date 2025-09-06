@@ -1,11 +1,17 @@
 {
-  "name": "@loopa-vibes/mcp-server",
+  "name": "@llv/mcp-server",
   "version": "1.0.0",
   "description": "MCP server for Lines Loops Vibes - iterative thinking and problem-solving framework",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node test.js",
+    "demo": "node enhanced-examples.js",
+    "creative-flows": "node creative-flows.js",
+    "enhanced-demo": "git checkout enhanced-open-source && node enhanced-examples.js",
+    "setup-dev": "npm install && git fetch --all",
+    "test-all": "node test.js && node enhanced-examples.js"
   },
   "keywords": [
     "mcp",
