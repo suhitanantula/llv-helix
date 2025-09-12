@@ -1,5 +1,5 @@
 {
-  "name": "@llv/mcp-server",
+  "name": "llv-helix",
   "version": "1.0.0",
   "description": "MCP server for Lines Loops Vibes - iterative thinking and problem-solving framework",
   "main": "index.js",
@@ -20,6 +20,11 @@
     "vibes",
     "iterative-thinking"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suhitanantula/llv-helix.git"
+  },
+  "homepage": "https://github.com/suhitanantula/llv-helix#readme",
   "author": "Inspired by Suhit Anantula's methodologies",
   "license": "MIT",
   "dependencies": {

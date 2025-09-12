@@ -6,110 +6,147 @@
 [![LLV Framework](https://img.shields.io/badge/LLV-Framework-brightgreen)](#framework)
 [![Open Source](https://img.shields.io/badge/License-Open%20Source-orange)](LICENSE)
 [![AI Strategy](https://img.shields.io/badge/AI-Transformation-purple)](https://www.suhitanantula.com/)
+npm run demo
+
+
+# LLV MCP Server: Strategic Intelligence as Code 🎨🚀
+
+
+
+[![npm version](https://badge.fury.io/js/llv-helix.svg)](https://www.npmjs.com/package/llv-helix)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue.svg)](https://modelcontextprotocol.io)
+
+
+
+> **Dial in the right rhythm for the right challenge.**
+> LLV brings strategy into code: **Lines** for structure, **Loops** for learning, **Vibes** for energy — all frequency-tuned (20–100Hz) for context.
+
 
 ---
 
-> *"AI transformation is organizational design, not technology implementation. Strategy is a systemic approach, not just a statement."*  
-> — **Suhit Anantula**, AI Transformation Architect & Author of The Helix Blueprint
 
-An MCP server implementing the revolutionary **Lines-Loops-Vibes framework** — a creativity operating system that transforms how we think, design, and lead in the co-intelligence age. Developed by **Suhit Anantula**, Australia's leading AI Transformation Architect with over 20 years in strategy design and systems thinking.
+## ⚡ TL;DR
 
-## 🌟 The LLV Framework: Co-Intelligence in Action
 
-The **Lines-Loops-Vibes Framework** embodies Suhit Anantula's core philosophy that transformation requires alignment of people, process, and purpose. This creativity operating system provides three foundational elements for systematic innovation:
-
-### The Framework Elements:
-
-- **Lines** 〰️: **Creative Flow Pathways** - Connect concepts and enable strategic thinking flow
-- **Loops** 🔄: **Iterative Intelligence Cycles** - Systematic iteration with AI-augmented feedback  
-- **Vibes** ✨: **Cognitive Energy States** - Modulate creative frequency and organizational atmosphere
-
-### 🎯 The Helix Connection
-
-Born from **The Helix Blueprint** methodology, LLV translates AI transformation principles into practical creative tools:
-- **Strategic Design** → Vibes (sensing organizational energy and context)
-- **Systems Thinking** → Lines (connecting insights across domains)  
-- **Iterative Strategy** → Loops (continuous learning and adaptation)
-
-## 🚀 Enhanced Open Source Features
-
-### ✨ Interactive Creative Flows
-Build sophisticated innovation workflows:
-- **Component Chaining**: Connect vibes, lines, and loops with relationship types
-- **Real-time Insights**: Get AI-augmented feedback as you build
-- **Flow Optimization**: Smart scoring and recommendations (0-100+)
-- **Connection Intelligence**: Understand how elements influence each other
-
-### 📚 Professional Templates (4 Pre-Built Systems)
-Jump-start transformation with expert-designed flows:
-- **🚀 Innovation Catalyst**: Systematic breakthrough thinking
-- **💼 Strategic Design**: Human-centered strategy development  
-- **📖 Narrative Strategy**: Storytelling that drives action
-- **🎨 Creative Intelligence**: Artistic and design innovation
-
-## 🚀 Quick Installation
 
 ```bash
-# Clone and setup
-git clone https://github.com/thegreenguy1012/LLV-MCP.git
-cd LLV-MCP
-npm install
+# Install
+npm install llv-helix
 
-# Add to Claude Code
-claude mcp add llv-framework node -- $(pwd)/index.js
-
-# Test the installation
+# Run demo
 npm run demo
+
+# Use in Claude Desktop
+@llv 20hz "Analyze competitive landscape"
+@llv 60hz "Plan sprint delivery roadmap"
+@llv 90hz "Generate breakthrough feature ideas"
 ```
 
-**→ [Complete Installation Guide](INSTALLATION.md)** - Detailed setup instructions and troubleshooting
+- 20Hz → deep systems thinking & long-term vision
+- 60Hz → focused execution & planning
+- 90Hz → breakthrough innovation & creativity
 
-## Available Tools
 
-### Line Tools
-- `create_line`: Create a new line connection with rhythm
-- `trace_line`: Send messages along a line with specific speed
+---
 
-### Loop Tools
-- `create_loop`: Create an iterative loop with type and rhythm
-- `iterate_loop`: Execute one iteration of a loop
 
-### Vibe Tools
-- `create_vibe`: Create an energy state with frequency and rhythm
-- `pulse_vibe`: Send a pulse through a vibe
+## 🧠 What is LLV?
 
-### System Tools
-- `set_context`: Set context that influences rhythms
-- `synchronize`: Sync multiple elements together
-- `compose_rhythm`: Compose complex rhythms from components
-- `visualize_system`: View the entire system state
+Lines–Loops–Vibes (LLV) is a strategic intelligence framework introduced in The Helix Moment.
 
-## Rhythm Types
+- Lines 〰️ Structure and pathways
+- Loops 🔄 Learning cycles and feedback
+- Vibes ✨ Energy and cultural context
 
-### Line Rhythms
-- **steady**: Constant flow
-- **accelerating**: Building speed
-- **pulsing**: On/off pattern
-- **syncopated**: Off-beat pattern
-- **flowing**: Natural wave-like
+In this MCP server, LLV becomes Strategic Intelligence as Code.
+Developers and strategists can model rhythms, switch frequencies, and embed strategic thinking directly into AI workflows.
 
-### Loop Rhythms  
-- **constant**: Unchanging pattern
-- **variable**: Changing intervals
-- **fibonacci**: Mathematical sequence
-- **exponential**: Exponential growth
-- **harmonic**: Musical intervals
 
-### Vibe Rhythms
-- **ambient**: Atmospheric background
-- **driving**: Strong steady beat
-- **syncopated**: Complex off-beat
-- **polyrhythmic**: Multiple simultaneous rhythms
-- **freeform**: Random/improvised
+---
 
-## Context Types
 
-Contexts modify the rhythms of influenced elements:
+## 🚀 Quick Start
+
+```bash
+npm install llv-helix
+```
+
+### Claude Desktop Integration
+
+Add to your claude_desktop_config.json:
+
+```json
+{
+  "mcpServers": {
+    "llv-helix": {
+      "command": "npx",
+      "args": ["llv-helix"]
+    }
+  }
+}
+```
+
+### Example Usage
+
+```bash
+# Deep analysis
+@llv 20hz "Our SaaS app is losing market share"
+
+# Execution planning
+@llv 60hz "Prepare Q4 launch roadmap"
+
+# Innovation mode
+@llv 90hz "Reimagine user onboarding experience"
+```
+
+
+---
+
+
+## 🎯 Who Is It For?
+
+- Strategists → Diagnose where you need clarity, iteration, or cultural reset.
+- Developers → Encode strategic rhythms into MCP-enabled apps and agents.
+- Teams → Shift mindset instantly by tuning the right Hz frequency.
+
+
+---
+
+
+## 📚 Learn More
+
+- 🌐 LLV Framework
+- 📖 The Helix Moment
+- 🏠 Suhit Anantula
+- 💼 LinkedIn
+
+👉 For advanced frequency spectrum, detailed scenarios, and roadmap — see ENHANCED.md
+
+
+---
+
+
+## 🤝 Contributing
+
+We welcome contributions of:
+
+- New templates & use cases
+- Integration examples
+- Documentation improvements
+
+```bash
+git clone https://github.com/suhitanantula/llv-helix
+cd llv-helix && npm install
+```
+
+
+---
+
+
+---
+
+Built with 🧠 by Suhit Anantula | Strategic Intelligence as Code
 
 - **creative**: 1.5x rhythm multiplier
 - **analytical**: 0.8x rhythm multiplier  
