@@ -232,7 +232,7 @@ builder.addComponent('loop', {
 
 ## 🧠 About Suhit Anantula
 
-**AI Transformation Architect** | **Strategy Design Expert** | **Author of The Helix Blueprint**
+**AI Transformation Architect** | **Strategy Design Expert** | **Author of The Helix Moment**
 
 With over 20 years of experience in strategy design and systems thinking, Suhit Anantula helps organizations navigate AI transformation through strategy, systems, and clarity. Based in Australia with deep connections to global innovation ecosystems.
 
@@ -243,7 +243,7 @@ With over 20 years of experience in strategy design and systems thinking, Suhit 
 - **Innovation Leadership**: Specialized AI guidance for executives
 
 ### 🌟 Key Contributions:
-- **The Helix Blueprint**: Revolutionary AI transformation methodology
+- **The Helix Moment**: Revolutionary AI transformation methodology
 - **15-Point Action Plan**: Practical AI integration framework
 - **Theory of the Business**: Strategic insights newsletter
 - **LLV Framework**: Open-source creativity operating system
@@ -316,7 +316,7 @@ git push origin feature/your-innovation
 ## 📚 Learn & Transform
 
 ### 📖 Essential Resources:
-- **The Helix Blueprint** - Complete AI transformation methodology
+- **The Helix Moment** - Complete AI transformation methodology
 - **15-Point Action Plan** - Practical AI integration steps
 - **Theory of the Business** - Weekly strategic insights
 - **Free Strategy Discovery** - Personal AI transformation consultation
@@ -329,4 +329,4 @@ git push origin feature/your-innovation
 
 ---
 
-*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Blueprint](https://www.suhitanantula.com/) | Powered by Co-Intelligence*
+*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Moment](https://www.suhitanantula.com/) | Powered by Co-Intelligence*
