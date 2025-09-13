@@ -1,6 +1,6 @@
 {
   "name": "llv-helix",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The Helix Moment: Strategic Intelligence as Code - MCP server for Lines-Loops-Vibes framework from The Helix Moment",
   "main": "index.js",
   "bin": {
