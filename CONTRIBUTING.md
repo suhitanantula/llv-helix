@@ -1,4 +1,4 @@
-# Contributing to the LLV Framework
+# Contributing to The Helix Moment Framework
 
 *Join the systematic creativity revolution - contributions welcome!*
 
@@ -6,7 +6,7 @@
 
 ## 🌟 Welcome Contributors!
 
-The LLV Framework is open source because breakthrough innovation emerges from collective intelligence. We welcome contributions that advance systematic creativity and help solve global challenges through coordinated creative intelligence.
+The Helix Moment Framework is open source because breakthrough innovation emerges from collective intelligence. We welcome contributions that advance systematic creativity and help solve global challenges through coordinated creative intelligence.
 
 ## 🎯 How to Contribute
 
@@ -42,8 +42,8 @@ The LLV Framework is open source because breakthrough innovation emerges from co
 ### 1. Setup Development Environment
 ```bash
 # Fork the repository on GitHub
-git clone https://github.com/YOUR-USERNAME/LLV-MCP.git
-cd LLV-MCP
+git clone https://github.com/YOUR-USERNAME/llv-helix.git
+cd llv-helix
 
 # Install dependencies
 npm install
@@ -65,7 +65,7 @@ git checkout enhanced-open-source
 npm run enhanced-demo
 
 # Check existing issues and discussions
-# Visit: https://github.com/thegreenguy1012/LLV-MCP/issues
+# Visit: https://github.com/suhitanantula/llv-helix/issues
 ```
 
 ### 3. Choose Your Contribution Area
@@ -301,6 +301,6 @@ Contributing to the LLV Framework means joining a global community working to tr
 
 *Questions? Start a discussion, open an issue, or reach out to the community. We're here to help you make meaningful contributions to the systematic creativity revolution!*
 
-**GitHub**: https://github.com/thegreenguy1012/LLV-MCP  
+**GitHub**: https://github.com/suhitanantula/llv-helix  
 **Community**: Join our discussions and connect with fellow contributors  
 **Professional**: [Suhit Anantula](https://www.suhitanantula.com/) for professional collaboration opportunities

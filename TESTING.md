@@ -50,16 +50,16 @@ npm run demo
 #### **Add MCP Server:**
 ```bash
 # For local development
-claude mcp add llv-helix node -- $(pwd)/index.js
+claude mcp add llv node -- $(pwd)/index.js
 
 # For published package (when available)
-claude mcp add llv-helix npx -- llv-helix
+claude mcp add llv npx -- llv-helix
 ```
 
 #### **Verify Connection:**
 ```bash
 claude mcp list
-# Should show: llv-helix: ✓ Connected
+# Should show: llv: ✓ Connected
 ```
 
 #### **Test in Claude Code:**
@@ -216,7 +216,7 @@ node index.js --help  # Should show error about stdin
 
 # Re-add with correct path
 claude mcp remove llv-helix
-claude mcp add llv-helix node -- $(pwd)/index.js
+claude mcp add llv node -- $(pwd)/index.js
 ```
 
 **Problem**: Tools not available in Claude Code

@@ -1,6 +1,6 @@
 # The Helix Moment: Enhanced Strategic Guide
 
-*From The Helix Moment by Suhit Anantula*
+*From [The Helix Moment](https://www.thehelixmoment.com/) by Suhit Anantula*
 
 ### Strategic Intelligence as Code - Advanced Applications
 
@@ -9,13 +9,13 @@
 ## 🔮 Why This Enhanced Guide?
 
 The **README** gives you the essentials — install, run, and start using The Helix Framework.
-This **Enhanced Guide** goes deeper: it explains the **frequency spectrum**, shows **real strategic scenarios**, and outlines the **bigger vision** behind The Helix Moment as the world's first **Strategic Intelligence framework as code**.
+This **Enhanced Guide** goes deeper: it explains the **frequency spectrum**, shows **real strategic scenarios**, and outlines the **bigger vision** behind [The Helix Moment](https://www.thehelixmoment.com/) as the world's first **Strategic Intelligence framework as code**.
 
 ---
 
 ## ⚡ The Hz Revolution
 
-The Helix Moment introduces a **frequency-based approach to strategy**:
+[The Helix Moment](https://www.thehelixmoment.com/) introduces a **frequency-based approach to strategy**:
 instead of vague "mindsets," you dial in the *optimal frequency* for the challenge.
 
 | Hz Range     | Cognitive State             | Best For                                 | Strategic Output                          |
@@ -41,7 +41,7 @@ instead of vague "mindsets," you dial in the *optimal frequency* for the challen
 npm install llv-helix
 
 # Add to Claude Code
-npx claude mcp add llv-framework npx -- llv-helix
+npx claude mcp add llv npx -- llv-helix
 
 # Try the demo
 npm run demo
@@ -192,7 +192,7 @@ claude "Visualize the complete transformation system with rhythm patterns"
 
 ## 📚 Essential Helix Resources
 
-- 🌀 **[The Helix Moment](https://www.suhitanantula.com/)** - Complete AI transformation methodology
+- 🌀 **[The Helix Moment](https://www.thehelixmoment.com/)** - Complete AI transformation methodology
 - 📖 **[Theory of the Business](https://www.theoryofthebusiness.com/)** - Weekly strategic insights
 - 🏠 **[Suhit Anantula](https://www.suhitanantula.com/)** - Official website & strategy consultation
 - 💼 **[LinkedIn](https://www.linkedin.com/in/suhitanantula/)** - Professional insights and community
@@ -231,6 +231,6 @@ Whether you're implementing systematic creativity or orchestrating complete AI t
 
 ---
 
-*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Moment](https://www.suhitanantula.com/) | Powered by Strategic Intelligence*
+*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Moment](https://www.thehelixmoment.com/) | Powered by Strategic Intelligence*
 
 **The Helix Moment is here. The question is: Are you ready to dial in your optimal frequency?** 🌀✨

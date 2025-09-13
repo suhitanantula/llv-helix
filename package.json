@@ -32,7 +32,7 @@
     "url": "git+https://github.com/suhitanantula/llv-helix.git"
   },
   "homepage": "https://github.com/suhitanantula/llv-helix#readme",
-  "author": "Inspired by Suhit Anantula's methodologies",
+  "author": "Suhit Anantula <suhit@suhitanantula.com> (https://www.suhitanantula.com/)",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"

@@ -47,10 +47,10 @@ npm run creative-flows
 ### 3. Add to Claude Code
 ```bash
 # If installed globally
-claude mcp add llv-framework npx -- llv-helix
+claude mcp add llv npx -- llv-helix
 
 # If cloned from source
-claude mcp add llv-framework node -- $(pwd)/index.js
+claude mcp add llv node -- $(pwd)/index.js
 ```
 
 ### 4. Verify Installation
@@ -73,7 +73,7 @@ claude "Create a vibe called 'innovation' with focused energy and 75Hz frequency
 git clone https://github.com/suhitanantula/llv-helix.git
 cd llv-helix
 npm install
-claude mcp add llv-framework node -- $(pwd)/index.js
+claude mcp add llv node -- $(pwd)/index.js
 ```
 
 **What you get:**
@@ -166,13 +166,13 @@ npm start
 #### Method 1: Command Line (Recommended)
 ```bash
 # Using NPM package (easiest)
-claude mcp add llv-framework npx -- llv-helix
+claude mcp add llv npx -- llv-helix
 
 # From local installation
-claude mcp add llv-framework node -- /path/to/llv-helix/index.js
+claude mcp add llv node -- /path/to/llv-helix/index.js
 
 # With environment variables
-claude mcp add llv-framework --env LLV_LOG_LEVEL=debug npx -- llv-helix
+claude mcp add llv --env LLV_LOG_LEVEL=debug npx -- llv-helix
 
 # Project-scoped (shared via .mcp.json)
 claude mcp add --scope project llv-framework npx -- llv-helix
@@ -279,7 +279,7 @@ npm install
 **Issue**: Claude Code can't find the MCP server
 ```bash
 # Solution: Use absolute path
-claude mcp add llv-framework node -- $(pwd)/index.js
+claude mcp add llv node -- $(pwd)/index.js
 
 # Verify path is correct
 ls -la index.js
@@ -332,14 +332,14 @@ claude --version
 3. **Join the Community**: GitHub Discussions for questions and sharing
 4. **Contribute**: See `CONTRIBUTING.md` for contribution guidelines
 
-### Professional Implementation
+### Professional Implementation with Suhit Anantula
 For organizations needing:
 - Custom framework development
-- Team training and implementation  
+- Team training and implementation
 - Measured creative ROI optimization
 - AI-augmented creative intelligence
 
-Contact: [Professional Services](https://www.suhitanantula.com/)
+**Connect directly:** [Book Strategy Discovery Call with Suhit](https://www.suhitanantula.com/) - AI Transformation Architect
 
 ### Development and Contribution
 - **GitHub Repository**: https://github.com/suhitanantula/llv-helix
