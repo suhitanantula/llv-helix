@@ -1,7 +1,7 @@
 {
   "name": "llv-helix",
   "version": "1.0.0",
-  "description": "MCP server for Lines Loops Vibes - iterative thinking and problem-solving framework",
+  "description": "The Helix Moment: Strategic Intelligence as Code - MCP server for Lines-Loops-Vibes framework from The Helix Moment",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -9,16 +9,20 @@
     "test": "node test.js",
     "demo": "node enhanced-examples.js",
     "creative-flows": "node creative-flows.js",
-    "enhanced-demo": "git checkout enhanced-open-source && node enhanced-examples.js",
-    "setup-dev": "npm install && git fetch --all",
+    "enhanced-demo": "node enhanced-examples.js",
+    "setup-dev": "npm install",
     "test-all": "node test.js && node enhanced-examples.js"
   },
   "keywords": [
+    "helix-moment",
+    "strategic-intelligence",
+    "ai-transformation",
     "mcp",
     "modelcontextprotocol",
-    "loops",
-    "vibes",
-    "iterative-thinking"
+    "lines-loops-vibes",
+    "systematic-creativity",
+    "co-intelligence",
+    "suhit-anantula"
   ],
   "repository": {
     "type": "git",

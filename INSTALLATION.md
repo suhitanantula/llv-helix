@@ -11,11 +11,22 @@
 - **Claude Code** or compatible MCP client
 - **Git** for cloning the repository
 
-### 1. Clone and Setup
+### 1. Installation Options
+
+#### Option A: NPM Install (Recommended)
+```bash
+# Install globally from npm
+npm install -g llv-helix
+
+# Or use with npx (no installation)
+npx llv-helix
+```
+
+#### Option B: Clone from Source
 ```bash
 # Clone the repository
-git clone https://github.com/thegreenguy1012/LLV-MCP.git
-cd LLV-MCP
+git clone https://github.com/suhitanantula/llv-helix.git
+cd llv-helix
 
 # Install dependencies
 npm install
@@ -35,7 +46,10 @@ npm run creative-flows
 
 ### 3. Add to Claude Code
 ```bash
-# Add the MCP server to Claude Code
+# If installed globally
+claude mcp add llv-framework npx -- llv-helix
+
+# If cloned from source
 claude mcp add llv-framework node -- $(pwd)/index.js
 ```
 
@@ -56,8 +70,8 @@ claude "Create a vibe called 'innovation' with focused energy and 75Hz frequency
 *Use this for the foundational Lines-Loops-Vibes MCP tools*
 
 ```bash
-git clone https://github.com/thegreenguy1012/LLV-MCP.git
-cd LLV-MCP
+git clone https://github.com/suhitanantula/llv-helix.git
+cd llv-helix
 npm install
 claude mcp add llv-framework node -- $(pwd)/index.js
 ```
@@ -71,13 +85,12 @@ claude mcp add llv-framework node -- $(pwd)/index.js
 *Use this for the interactive creative flows and real-time insights*
 
 ```bash
-git clone https://github.com/thegreenguy1012/LLV-MCP.git
-cd LLV-MCP
-git checkout enhanced-open-source
+git clone https://github.com/suhitanantula/llv-helix.git
+cd llv-helix
 npm install
 
-# Run the enhanced creative examples
-npm run enhanced-demo
+# Run the creative examples
+npm run demo
 ```
 
 **What you get:**
@@ -90,25 +103,21 @@ npm run enhanced-demo
 *Use this for contributing to the framework or advanced customization*
 
 ```bash
-git clone https://github.com/thegreenguy1012/LLV-MCP.git
-cd LLV-MCP
-
-# Install all branches and variants
-git fetch --all
+git clone https://github.com/suhitanantula/llv-helix.git
+cd llv-helix
 
 # Set up development environment
 npm install
-npm run setup-dev
 
 # Run all tests and examples
 npm run test-all
 ```
 
 **What you get:**
-- All framework variants and branches
+- Complete source code access
 - Development tools and testing suites
 - Documentation and contribution guidelines
-- Access to latest experimental features
+- Access to all features and examples
 
 ---
 
@@ -121,8 +130,8 @@ npm run test-all
     "test": "node test.js",
     "demo": "node enhanced-examples.js",
     "creative-flows": "node creative-flows.js", 
-    "enhanced-demo": "git checkout enhanced-open-source && node enhanced-examples.js",
-    "setup-dev": "npm install && git fetch --all",
+    "enhanced-demo": "node enhanced-examples.js",
+    "setup-dev": "npm install",
     "test-all": "node test.js && node enhanced-examples.js"
   }
 }
@@ -142,8 +151,11 @@ export LLV_PORT=8080
 # Set log level (default: info)
 export LLV_LOG_LEVEL=debug
 
-# Set custom data directory (default: ./data)
+# Set custom data directory (default: ./llv-data)
 export LLV_DATA_DIR=/path/to/data
+
+# Enable/disable data persistence (default: enabled)
+export LLV_PERSISTENCE=true
 
 # Start with custom config
 npm start
@@ -151,24 +163,30 @@ npm start
 
 ### Claude Code Integration
 
-#### Method 1: Command Line Installation (Recommended for Development)
+#### Method 1: Command Line (Recommended)
 ```bash
-# Standard installation
-claude mcp add llv-framework node -- /path/to/LLV-MCP/index.js
+# Using NPM package (easiest)
+claude mcp add llv-framework npx -- llv-helix
 
-# With custom configuration
-claude mcp add llv-framework node -- /path/to/LLV-MCP/index.js --port 8080 --log-level debug
+# From local installation
+claude mcp add llv-framework node -- /path/to/llv-helix/index.js
+
+# With environment variables
+claude mcp add llv-framework --env LLV_LOG_LEVEL=debug npx -- llv-helix
+
+# Project-scoped (shared via .mcp.json)
+claude mcp add --scope project llv-framework npx -- llv-helix
 ```
 
-#### Method 2: MCP Configuration File (Recommended for Production)
-Add to your MCP configuration file (usually `~/.config/claude-code/mcp.json`):
+#### Method 2: Manual Configuration (.mcp.json)
+For project-specific configuration, create `.mcp.json` in your project root:
 
 ```json
 {
   "mcpServers": {
     "llv-framework": {
       "command": "npx",
-      "args": ["-y", "@llv/mcp-server"],
+      "args": ["-y", "llv-helix"],
       "env": {
         "LLV_LOG_LEVEL": "info"
       }
@@ -184,11 +202,12 @@ Add to your MCP configuration file (usually `~/.config/claude-code/mcp.json`):
   "mcpServers": {
     "llv-framework": {
       "command": "node",
-      "args": ["/path/to/LLV-MCP/index.js"],
+      "args": ["/path/to/llv-helix/index.js"],
       "env": {
         "LLV_PORT": "8080",
         "LLV_LOG_LEVEL": "debug",
-        "LLV_DATA_DIR": "/custom/data/path"
+        "LLV_DATA_DIR": "/custom/data/path",
+        "LLV_PERSISTENCE": "true"
       }
     }
   }
@@ -199,8 +218,8 @@ Add to your MCP configuration file (usually `~/.config/claude-code/mcp.json`):
 {
   "mcpServers": {
     "llv-framework": {
-      "command": "npx", 
-      "args": ["-y", "github:thegreenguy1012/LLV-MCP"]
+      "command": "npx",
+      "args": ["-y", "llv-helix"]
     }
   }
 }
@@ -214,8 +233,10 @@ Add to your MCP configuration file (usually `~/.config/claude-code/mcp.json`):
 ```bash
 # After installation, use in Claude Code:
 claude "Create a creative flow for innovation"
-claude "Add a vibe with chaotic energy and 90Hz frequency" 
+claude "Add a vibe with chaotic energy and 90Hz frequency"
 claude "Connect the components and visualize the system"
+claude "Save the current session data"
+claude "Load a previous session"
 ```
 
 ### Enhanced Creative Flows
@@ -275,10 +296,11 @@ LLV_LOG_LEVEL=debug claude mcp restart llv-framework
 
 **Issue**: Enhanced features not working
 ```bash
-# Solution: Make sure you're on the right branch
-git checkout enhanced-open-source
-git pull origin enhanced-open-source
+# Solution: Make sure dependencies are installed
 npm install
+
+# Try running the demo
+npm run demo
 ```
 
 ### Compatibility Issues
@@ -320,7 +342,7 @@ For organizations needing:
 Contact: [Professional Services](https://www.suhitanantula.com/)
 
 ### Development and Contribution
-- **GitHub Repository**: https://github.com/thegreenguy1012/LLV-MCP
+- **GitHub Repository**: https://github.com/suhitanantula/llv-helix
 - **Issues and Features**: Use GitHub Issues for bugs and feature requests
 - **Discussions**: Join community discussions for questions and sharing
 - **Pull Requests**: Contributions welcome following contribution guidelines
@@ -336,7 +358,7 @@ Contact: [Professional Services](https://www.suhitanantula.com/)
 - [ ] MCP server added to Claude Code
 - [ ] Server appears in `claude mcp list`
 - [ ] Basic tools work in Claude Code session
-- [ ] Enhanced features accessible (if using enhanced branch)
+- [ ] Demo runs successfully with `npm run demo`
 
 **Installation successful?** You're ready to experience systematic creativity! 🎨
 

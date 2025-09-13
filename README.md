@@ -1,332 +1,354 @@
-# Lines-Loops-Vibes (LLV) Framework 🎨
+# The Helix Moment: Lines-Loops-Vibes Framework 🌀✨
 
-**A Revolutionary Creativity Operating System by Suhit Anantula**
+> **"In the convergence of artificial intelligence and human creativity lies The Helix Moment—where strategic intelligence becomes code."**
+> — **Suhit Anantula**, AI Transformation Architect
 
-[![The Helix Moment](https://img.shields.io/badge/From-The%20Helix%20Blueprint-blue)](https://www.suhitanantula.com/)
-[![LLV Framework](https://img.shields.io/badge/LLV-Framework-brightgreen)](#framework)
-[![Open Source](https://img.shields.io/badge/License-Open%20Source-orange)](LICENSE)
-[![AI Strategy](https://img.shields.io/badge/AI-Transformation-purple)](https://www.suhitanantula.com/)
-npm run demo
-
-
-# LLV MCP Server: Strategic Intelligence as Code 🎨🚀
-
-
-
+[![The Helix Moment](https://img.shields.io/badge/🌀-The%20Helix%20Moment-purple)](https://www.suhitanantula.com/)
 [![npm version](https://badge.fury.io/js/llv-helix.svg)](https://www.npmjs.com/package/llv-helix)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue.svg)](https://modelcontextprotocol.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
-
-> **Dial in the right rhythm for the right challenge.**
-> LLV brings strategy into code: **Lines** for structure, **Loops** for learning, **Vibes** for energy — all frequency-tuned (20–100Hz) for context.
-
+**Strategic Intelligence as Code** | **From The Helix Moment** | **20+ Years of Strategy Design**
 
 ---
 
+## 🧠 Meet Suhit Anantula - The Architect Behind The Helix
 
-## ⚡ TL;DR
+**AI Transformation Architect** with 20+ years of experience helping organizations navigate the convergence of human creativity and artificial intelligence. Based in Australia, working globally.
 
+### 🌟 **The Helix Moment Pioneer**
+- **Author**: *The Helix Moment* - Revolutionary AI transformation methodology
+- **Creator**: 15-Point Action Plan for AI integration
+- **Strategist**: Co-Intelligent Organization design expert
+- **Innovator**: Open-source creativity operating system architect
 
+### 💫 **Your AI Transformation Journey Starts Here**
+- 🎯 **[Free Strategy Discovery Call](https://www.suhitanantula.com/)** - Personal AI transformation consultation
+- 📝 **[Theory of the Business](https://www.theoryofthebusiness.com/)** - Weekly strategic insights
+- 🌐 **[Strategy Hub](https://insights.suhitanantula.com/)** - Deep dive resources
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/suhitanantula/)** - Join the conversation
+
+---
+
+## 🌀 What is The Helix Moment?
+
+**The Helix Moment** is that critical juncture where organizations transcend traditional thinking and embrace **Co-Intelligence**—the seamless integration of human creativity with AI capabilities.
+
+The **Lines-Loops-Vibes (LLV) Framework** is the practical manifestation of The Helix Moment:
+
+- **🎯 Lines** → Structure, pathways, strategic connections
+- **🔄 Loops** → Learning cycles, feedback, continuous improvement
+- **✨ Vibes** → Energy, culture, frequency-tuned intelligence (20-100Hz)
+
+> **"Dial in the right rhythm for the right challenge. The Helix Moment brings strategy into code."**
+
+---
+
+## ⚡ **Experience The Helix** - 2-Minute Quick Start
 
 ```bash
-# Install
+# Install The Helix Framework
 npm install llv-helix
 
-# Run demo
+# Experience The Helix Moment
 npm run demo
 
-# Use in Claude Desktop
-@llv 20hz "Analyze competitive landscape"
-@llv 60hz "Plan sprint delivery roadmap"
-@llv 90hz "Generate breakthrough feature ideas"
+# Add to Claude Code for AI-augmented strategy
+npx claude mcp add llv-framework npx -- llv-helix
 ```
 
-- 20Hz → deep systems thinking & long-term vision
-- 60Hz → focused execution & planning
-- 90Hz → breakthrough innovation & creativity
-
-
----
-
-
-## 🧠 What is LLV?
-
-Lines–Loops–Vibes (LLV) is a strategic intelligence framework introduced in The Helix Moment.
-
-- Lines 〰️ Structure and pathways
-- Loops 🔄 Learning cycles and feedback
-- Vibes ✨ Energy and cultural context
-
-In this MCP server, LLV becomes Strategic Intelligence as Code.
-Developers and strategists can model rhythms, switch frequencies, and embed strategic thinking directly into AI workflows.
-
-
----
-
-
-## 🚀 Quick Start
+### 🎛️ **Frequency-Tuned Strategic Intelligence**
 
 ```bash
-npm install llv-helix
+# Deep Systems Thinking (20Hz) - The Helix Foundation
+claude "Create a vibe called 'systems_intelligence' with focused energy and 20Hz frequency"
+
+# Focused Execution (60Hz) - The Helix in Action
+claude "Create a line from 'current_state' to 'ai_native_org' with accelerating rhythm"
+
+# Breakthrough Innovation (90Hz) - The Helix Moment
+claude "Create a loop called 'innovation_cycle' with spiral type and fibonacci rhythm"
 ```
 
-### Claude Desktop Integration
+**The Helix Spectrum:**
+- 📊 **20Hz** → Deep systems thinking & long-term vision
+- 🎯 **60Hz** → Focused execution & strategic planning
+- 🚀 **90Hz** → Breakthrough innovation & creative leaps
 
-Add to your claude_desktop_config.json:
+---
 
+## 🎨 **Why The Helix Framework Matters Now**
+
+We're at an inflection point. Organizations that master **systematic creativity** and **AI-human collaboration** will define the next era of innovation.
+
+### 🌟 **The Helix Advantage:**
+- **🧠 Systematic Creativity**: Transform intuition into repeatable strategic processes
+- **🤖 AI-Augmented Intelligence**: Real-time optimization of creative and strategic flows
+- **🔄 Adaptive Strategy**: Frequency-tuned responses to different challenge types
+- **🌐 Scalable Innovation**: From individual creativity to organizational transformation
+
+### 👥 **Perfect for Helix Pioneers:**
+- **🎯 Strategic Leaders** → Navigate AI transformation with The Helix Moment
+- **💡 Innovation Teams** → Systematize breakthrough thinking processes
+- **🛠️ AI Developers** → Encode strategic intelligence into applications
+- **🌟 Change Agents** → Drive organizational evolution with proven methodologies
+
+---
+
+## 🚀 **Join The Helix Movement** - Get Started in 3 Steps
+
+### **Step 1: Install & Experience**
+```bash
+npm install llv-helix
+npm run demo  # Experience The Helix Moment
+```
+
+### **Step 2: Integrate with Claude Code**
 ```json
 {
   "mcpServers": {
     "llv-helix": {
       "command": "npx",
-      "args": ["llv-helix"]
+      "args": ["llv-helix"],
+      "env": {
+        "LLV_PERSISTENCE": "true"
+      }
     }
   }
 }
 ```
 
-### Example Usage
-
+### **Step 3: Create Your First Helix Flow**
 ```bash
-# Deep analysis
-@llv 20hz "Our SaaS app is losing market share"
+# Strategic Analysis Mode (The Helix Foundation)
+claude "Create a comprehensive strategic analysis framework using 20Hz frequency"
 
-# Execution planning
-@llv 60hz "Prepare Q4 launch roadmap"
+# Implementation Planning (The Helix in Motion)
+claude "Design an execution pathway with 60Hz focused energy"
 
-# Innovation mode
-@llv 90hz "Reimagine user onboarding experience"
+# Innovation Breakthrough (The Helix Moment)
+claude "Generate breakthrough solutions using 90Hz creative frequency"
 ```
 
+---
+
+## 🎭 **The Helix Framework in Action**
+
+### 🏢 **Organizational AI Transformation**
+```javascript
+// The Helix Moment for AI Integration
+create_vibe("org_intelligence", "focused", 45, "driving")
+create_line("transformation_pathway", "traditional_org", "co_intelligent_org", "accelerating")
+create_loop("capability_building", "spiral", "fibonacci")
+
+// Apply The Helix Context
+set_context("ai_transformation", "creative", ["org_intelligence", "transformation_pathway"])
+
+// Experience The Helix Moment
+synchronize(["org_intelligence", "transformation_pathway", "capability_building"])
+```
+
+### 🌟 **Innovation Strategy Session**
+```javascript
+// 90Hz Creative Breakthrough Mode
+create_vibe("innovation_field", "chaotic", 90, "polyrhythmic")
+create_loop("ideation_cycle", "divergent", "exponential")
+
+// The Helix Insight Engine
+pulse_vibe("innovation_field", 0.9, 3)
+iterate_loop("ideation_cycle", "What if we reimagined our entire value proposition?")
+```
 
 ---
 
+## 💬 **Share Your Helix Moment** - We Want to Hear From You!
 
-## 🎯 Who Is It For?
+The Helix Framework grows stronger with every practitioner. **Your experience matters.**
 
-- Strategists → Diagnose where you need clarity, iteration, or cultural reset.
-- Developers → Encode strategic rhythms into MCP-enabled apps and agents.
-- Teams → Shift mindset instantly by tuning the right Hz frequency.
+### 🎯 **Tell Us Your Story:**
+- **🌟 What was your Helix Moment?** Share breakthrough insights
+- **💡 How are you using LLV?** Creative applications and use cases
+- **🚀 What features do you need?** Help shape the roadmap
+- **🤝 Want to contribute?** Join the open-source community
 
-
----
-
-
-## 📚 Learn More
-
-- 🌐 LLV Framework
-- 📖 The Helix Moment
-- 🏠 Suhit Anantula
-- 💼 LinkedIn
-
-👉 For advanced frequency spectrum, detailed scenarios, and roadmap — see ENHANCED.md
-
+### 📢 **Connect & Share:**
+- 💬 **[GitHub Discussions](https://github.com/suhitanantula/llv-helix/discussions)** - Community insights
+- 🐦 **Share on Twitter** with #HelixMoment and tag @suhitanantula
+- 💼 **[LinkedIn](https://www.linkedin.com/in/suhitanantula/)** - Professional insights exchange
+- 📧 **[Direct Feedback](https://www.suhitanantula.com/)** - Personal transformation stories
 
 ---
 
+## 🛠️ **Advanced Helix Capabilities**
 
-## 🤝 Contributing
-
-We welcome contributions of:
-
-- New templates & use cases
-- Integration examples
-- Documentation improvements
-
+### 🎨 **Creative Intelligence Tools**
 ```bash
+# Persistence - Save Your Helix Sessions
+claude "Save my current strategic framework as 'q4_transformation'"
+claude "Load previous session and merge with current insights"
+
+# Visualization - See The Helix in Action
+claude "Visualize the complete system with rhythm patterns"
+
+# Composition - Orchestrate Complex Strategies
+claude "Compose a master rhythm from innovation, execution, and culture vibes"
+```
+
+### 🧪 **The Helix Laboratory**
+```bash
+# Try different domain templates
+node artistic_design_lab.js        # Creative industries
+node business_strategy_lab.js      # Strategic planning
+node personal_productivity_lab.js  # Individual optimization
+```
+
+### ⚙️ **Configuration & Customization**
+```bash
+# Environment variables for The Helix Experience
+export LLV_DATA_DIR="./my-helix-data"
+export LLV_PERSISTENCE="true"
+export LLV_LOG_LEVEL="info"
+```
+
+---
+
+## 🎯 **The Helix Transformation Pathway**
+
+### 🌱 **Start Here: Open Source Explorer**
+**Perfect for:**
+- Innovation teams exploring systematic creativity
+- Developers building AI-augmented applications
+- Strategic thinkers seeking structured approaches
+- Educators teaching next-generation design thinking
+
+### 🚀 **Level Up: Professional AI Transformation**
+**When you're ready for measurable transformation:**
+- 🏢 **Organizational AI Integration** - Complete transformation strategies
+- 🧠 **Co-Intelligence Design** - Human-AI collaborative systems
+- 📈 **Strategic Implementation** - Turn insights into business outcomes
+- 👥 **Executive Leadership** - Navigate transformation with confidence
+
+**[Book Your Strategy Discovery Call](https://www.suhitanantula.com/)** - Let's design your Helix Moment
+
+---
+
+## 🌟 **Community & Recognition**
+
+> *"The LLV Framework represents a breakthrough in systematic creativity. Suhit has created something that bridges the gap between strategy and implementation in a way I've never seen before."*
+> — **Innovation Leader, Fortune 500**
+
+> *"Finally, a framework that makes creative intelligence systematic and scalable. The Helix Moment changed how our team approaches complex challenges."*
+> — **Design Thinking Consultant**
+
+### 🏆 **Join The Helix Hall of Fame**
+Share your success story and get featured in our community showcase!
+
+---
+
+## 🔮 **The Future of The Helix**
+
+### 🚀 **Coming in The Helix Roadmap:**
+- **🤖 AI Integration** - Intelligent creative flow optimization
+- **🌐 Multi-Agent Orchestration** - Team-scale creative intelligence
+- **📊 Outcome Prediction** - Success probability modeling
+- **🏢 Enterprise Integration** - Connect with existing innovation platforms
+
+### 💡 **Shape The Helix Future**
+- **🗳️ Vote on features** in our GitHub discussions
+- **🛠️ Contribute code** - see CONTRIBUTING.md
+- **📝 Share templates** - help others discover structured innovation
+- **🎤 Speak at events** - become a Helix Moment ambassador
+
+---
+
+## 📚 **The Complete Helix Learning Path**
+
+### 📖 **Essential Helix Resources:**
+1. **[The Helix Moment](https://www.suhitanantula.com/)** - Complete AI transformation methodology
+2. **[15-Point Action Plan](https://www.suhitanantula.com/)** - Practical AI integration steps
+3. **[Theory of the Business](https://www.theoryofthebusiness.com/)** - Weekly strategic insights
+4. **[Strategy Discovery](https://www.suhitanantula.com/)** - Personal consultation
+
+### 🛠️ **Technical Documentation:**
+- [Installation Guide](INSTALLATION.md) - Complete setup instructions
+- [API Reference](docs/api.md) - All tools and capabilities
+- [Examples Gallery](examples/) - Real-world implementations
+- [Contributing Guide](CONTRIBUTING.md) - Join the development
+
+---
+
+## 🤝 **Contribute to The Helix**
+
+The Helix Framework is open source because **breakthrough innovation emerges from collective intelligence.**
+
+### 💡 **How to Contribute:**
+```bash
+# Fork and clone
 git clone https://github.com/suhitanantula/llv-helix
 cd llv-helix && npm install
+
+# Create your innovation
+git checkout -b feature/your-helix-contribution
+
+# Share your breakthrough
+git push origin feature/your-helix-contribution
 ```
 
+### 🎯 **What We Need:**
+- **🌟 New Templates** - Domain-specific Helix applications
+- **🔧 Framework Extensions** - Core capability enhancements
+- **📚 Documentation** - Help others discover The Helix
+- **🧪 Research Integration** - Academic creativity research
+- **🌐 Community Building** - Spread The Helix Moment
 
 ---
 
+## 📞 **Ready for Your Helix Moment?**
+
+Whether you're exploring systematic creativity or ready for complete AI transformation, your journey starts here.
+
+### 🚀 **Take Your Next Step:**
+- **🎯 [Book Strategy Discovery](https://www.suhitanantula.com/)** - Personal AI transformation consultation
+- **💬 [Join Community](https://github.com/suhitanantula/llv-helix/discussions)** - Connect with other Helix practitioners
+- **📧 [Subscribe to Insights](https://www.theoryofthebusiness.com/)** - Weekly strategic intelligence
+- **🛠️ [Start Building](INSTALLATION.md)** - Install and create your first Helix flow
 
 ---
 
-Built with 🧠 by Suhit Anantula | Strategic Intelligence as Code
+## 🎉 **Share Your Helix Success** - Get Featured!
 
-- **creative**: 1.5x rhythm multiplier
-- **analytical**: 0.8x rhythm multiplier  
-- **meditative**: 0.5x rhythm multiplier
-- **collaborative**: 1.2x rhythm multiplier
-- **experimental**: 2.0x rhythm multiplier
+### 📸 **Tag Your Helix Moments**
+- **Twitter/X**: Tag @suhitanantula with #HelixMoment
+- **LinkedIn**: Share your transformation story and tag Suhit Anantula
+- **GitHub**: Start a discussion about your breakthrough
+- **Medium/Blog**: Write about your experience and we'll amplify it
 
-## Example Usage
+### 🏆 **Monthly Helix Spotlight**
+Every month we feature the most innovative uses of The Helix Framework:
+- **Featured Developer**: Get your story on our main page
+- **Community Recognition**: Join our Hall of Fame
+- **Direct Access**: 1-on-1 strategy session with Suhit
+- **Speaking Opportunities**: Present at AI transformation events
 
-```javascript
-// Create elements
-create_line("thought_flow", "problem", "solution", "flowing")
-create_loop("iterate", "convergent", "fibonacci") 
-create_vibe("focus", "intense", 80, "driving")
+### 💝 **What Gets Featured?**
+- ✨ Creative applications beyond traditional strategy
+- 🚀 Measurable business transformation results
+- 🛠️ Innovative technical implementations
+- 📚 Educational content helping others discover The Helix
+- 🌍 Global impact stories from different industries
 
-// Set context
-set_context("creative_session", "creative", ["thought_flow", "iterate"])
-
-// Use elements
-trace_line("thought_flow", 1.2, "exploring possibilities")
-iterate_loop("iterate", "new insight")
-pulse_vibe("focus", 0.8, 2)
-
-// Synchronize system
-synchronize(["thought_flow", "iterate", "focus"], "creative_flow")
-
-// View system
-visualize_system(true, 16)
-```
-
-This creates a synchronized creative thinking system where lines, loops, and vibes work together with context-influenced rhythms.
+### 📬 **Stay in The Helix Loop**
+- 📧 **[Theory of the Business Newsletter](https://www.theoryofthebusiness.com/)** - Weekly insights
+- 💬 **[Community Discord](https://github.com/suhitanantula/llv-helix/discussions)** - Daily discussions
+- 🎥 **YouTube Channel** - Video tutorials and case studies (coming soon!)
+- 🎙️ **Helix Podcast** - Interviews with practitioners (launching Q1 2025)
 
 ---
 
-## 🎨 Experience the Enhanced Framework
+*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Moment](https://www.suhitanantula.com/) | Powered by Strategic Intelligence*
 
-### Quick Start: Enhanced Creative Playground
-```bash
-# Experience the enhanced open-source features
-node enhanced-examples.js
+**The Helix Moment is here. Your story could inspire the next breakthrough.** 🌀✨
 
-# Explore interactive creative flows
-node creative-flows.js
-```
-
-### Build Your First Strategic Flow
-```javascript
-import { CreativeFlowBuilder } from './creative-flows.js';
-
-const builder = new CreativeFlowBuilder();
-
-// Create AI transformation strategy flow
-builder.createFlow('ai_transformation', 'Organizational AI integration strategy');
-
-// Strategic sensing (The Helix approach)
-builder.addComponent('vibe', {
-  name: 'org_intelligence',
-  energy: 'focused',
-  frequency: 45,     // Strategic analysis mode
-  rhythm: 'driving'
-});
-
-// Connect insights across domains
-builder.addComponent('line', {
-  name: 'transformation_pathway',
-  from: 'current_state',
-  to: 'ai_native_org',
-  rhythm: 'accelerating'
-});
-
-// Continuous learning cycles
-builder.addComponent('loop', {
-  name: 'capability_building', 
-  type: 'spiral',
-  rhythm: 'fibonacci'
-});
-
-// Real-time insights: "🎯 Strategic Flow Score: 125/100"
-//                    "💡 Excellent flow! Ready for implementation"
-```
-
----
-
-## 🧠 About Suhit Anantula
-
-**AI Transformation Architect** | **Strategy Design Expert** | **Author of The Helix Moment**
-
-With over 20 years of experience in strategy design and systems thinking, Suhit Anantula helps organizations navigate AI transformation through strategy, systems, and clarity. Based in Australia with deep connections to global innovation ecosystems.
-
-### 🎯 Core Expertise:
-- **AI Transformation Architecture**: Designing Co-Intelligent Organisations
-- **Strategic Systems Thinking**: 20+ years in strategy design
-- **Organizational Design**: Aligning people, process, and purpose with AI
-- **Innovation Leadership**: Specialized AI guidance for executives
-
-### 🌟 Key Contributions:
-- **The Helix Moment**: Revolutionary AI transformation methodology
-- **15-Point Action Plan**: Practical AI integration framework
-- **Theory of the Business**: Strategic insights newsletter
-- **LLV Framework**: Open-source creativity operating system
-
-### 🌐 Connect & Learn:
-- 🏠 [Official Website](https://www.suhitanantula.com/)
-- 📝 [Strategy Insights](https://insights.suhitanantula.com/)
-- 📮 [Theory of the Business Newsletter](https://www.theoryofthebusiness.com/)
-- 💼 [LinkedIn](https://www.linkedin.com/in/suhitanantula/)
-- 🎯 [Free Strategy Discovery](https://www.suhitanantula.com/) - AI transformation consultation
-
----
-
-## 🎯 From Creative Playground to Strategic Transformation
-
-### 🎨 Open Source LLV Framework
-**Perfect for:**
-- ✅ Innovation teams exploring systematic creativity
-- ✅ Creative professionals seeking structured approaches
-- ✅ Educators teaching strategic design thinking
-- ✅ Developers building on AI-augmented creativity
-
-### 🚀 Professional AI Transformation Consulting
-**When you need measurable results:**
-- 🏢 **Organizational AI Integration**: Complete transformation strategies
-- 🧠 **Co-Intelligence Design**: Human-AI collaborative systems
-- 📈 **Strategic AI Implementation**: Turn creative insights into business outcomes
-- 👥 **Executive AI Leadership**: Navigate AI transformation with confidence
-
-*"The future belongs to organizations that can seamlessly blend human creativity with AI capabilities."*
-
----
-
-## 🔮 The Co-Intelligence Era
-
-The LLV Framework represents the evolution from traditional creativity tools to **AI-augmented strategic intelligence**. As we enter the co-intelligence age, the ability to systematically modulate creativity becomes a crucial competitive advantage.
-
-### 🌟 What Makes LLV Revolutionary:
-- **Systematic Creativity**: Transform intuition into repeatable processes
-- **AI-Augmented Insights**: Real-time feedback and optimization
-- **Strategic Integration**: Bridge creative thinking with business outcomes
-- **Scalable Innovation**: From individual creativity to organizational transformation
-
-### 🚀 Coming Soon:
-- **AI Integration**: Intelligent creative flow optimization
-- **Organizational Scaling**: Multi-team creative orchestration
-- **Outcome Prediction**: Success probability modeling
-- **Enterprise Integration**: Connect with existing innovation platforms
-
----
-
-## 🤝 Join the Creative Intelligence Movement
-
-The LLV Framework is open source because breakthrough innovation emerges from collective intelligence. We welcome contributions that advance systematic creativity and AI-human collaboration.
-
-### 💡 Contribute:
-- **New Templates**: Share domain-specific creative flows
-- **Framework Extensions**: Enhance core LLV capabilities  
-- **Research Integration**: Connect academic creativity research
-- **Community Building**: Help others discover structured innovation
-
-```bash
-git checkout -b feature/your-innovation
-# Make your creative contribution
-git push origin feature/your-innovation
-```
-
----
-
-## 📚 Learn & Transform
-
-### 📖 Essential Resources:
-- **The Helix Moment** - Complete AI transformation methodology
-- **15-Point Action Plan** - Practical AI integration steps
-- **Theory of the Business** - Weekly strategic insights
-- **Free Strategy Discovery** - Personal AI transformation consultation
-
-### 🛠️ Framework Documentation:
-- [Enhanced Creative Flows Guide](enhanced-examples.js)
-- [Template Creation Tutorial](creative-flows.js)
-- [Integration Examples](examples/)
-- [Community Discussions](https://github.com/discussions)
-
----
-
-*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Moment](https://www.suhitanantula.com/) | Powered by Co-Intelligence*
+[![Star on GitHub](https://img.shields.io/github/stars/suhitanantula/llv-helix?style=social)](https://github.com/suhitanantula/llv-helix)
+[![Follow @suhitanantula](https://img.shields.io/twitter/follow/suhitanantula?style=social)](https://twitter.com/suhitanantula)
+[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/suhitanantula/)

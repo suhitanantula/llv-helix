@@ -5,6 +5,8 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
+import { promises as fs } from 'fs';
+import { join } from 'path';
 
 class LinesLoopsVibesServer {
   constructor() {
@@ -26,6 +28,15 @@ class LinesLoopsVibesServer {
     this.vibes = new Map();
     this.rhythms = new Map();
     this.contexts = new Map();
+
+    // Data persistence settings
+    this.dataDir = process.env.LLV_DATA_DIR || './llv-data';
+    this.persistenceEnabled = process.env.LLV_PERSISTENCE !== 'false';
+
+    // Load data on startup if persistence is enabled
+    if (this.persistenceEnabled) {
+      this.loadData().catch(console.error);
+    }
   }
 
   setupToolHandlers() {
@@ -279,6 +290,37 @@ class LinesLoopsVibesServer {
             },
           },
         },
+        {
+          name: 'save_data',
+          description: 'Save current lines, loops, vibes, and contexts to persistent storage',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              filename: {
+                type: 'string',
+                description: 'Optional custom filename (without extension)',
+              },
+            },
+          },
+        },
+        {
+          name: 'load_data',
+          description: 'Load lines, loops, vibes, and contexts from persistent storage',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              filename: {
+                type: 'string',
+                description: 'Optional custom filename (without extension)',
+              },
+              merge: {
+                type: 'boolean',
+                description: 'Merge with existing data instead of replacing',
+                default: false,
+              },
+            },
+          },
+        },
       ],
     }));
 
@@ -306,6 +348,10 @@ class LinesLoopsVibesServer {
           return this.composeRhythm(args);
         case 'visualize_system':
           return this.visualizeSystem(args);
+        case 'save_data':
+          return this.saveData(args);
+        case 'load_data':
+          return this.loadDataTool(args);
         default:
           throw new Error(`Unknown tool: ${name}`);
       }
@@ -314,7 +360,51 @@ class LinesLoopsVibesServer {
 
   createLine(args) {
     const { name, from, to, rhythm = 'steady' } = args;
-    
+
+    if (!name || name.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Line name is required. Please provide a name for the line.`,
+          },
+        ],
+      };
+    }
+
+    if (!from || from.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Starting point (from) is required. Please specify where the line starts.`,
+          },
+        ],
+      };
+    }
+
+    if (!to || to.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Ending point (to) is required. Please specify where the line ends.`,
+          },
+        ],
+      };
+    }
+
+    if (this.lines.has(name)) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `⚠️ Line "${name}" already exists. Use a different name or trace the existing line.`,
+          },
+        ],
+      };
+    }
+
     const line = {
       name,
       from,
@@ -339,7 +429,40 @@ class LinesLoopsVibesServer {
 
   createLoop(args) {
     const { name, type, rhythm = 'constant' } = args;
-    
+
+    if (!name || name.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Loop name is required. Please provide a name for the loop.`,
+          },
+        ],
+      };
+    }
+
+    if (!type || type.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Loop type is required. Please specify a type: infinite, convergent, divergent, spiral, or oscillating.`,
+          },
+        ],
+      };
+    }
+
+    if (this.loops.has(name)) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `⚠️ Loop "${name}" already exists. Use a different name or iterate the existing loop.`,
+          },
+        ],
+      };
+    }
+
     const loop = {
       name,
       type,
@@ -364,7 +487,40 @@ class LinesLoopsVibesServer {
 
   createVibe(args) {
     const { name, energy, frequency = 50, rhythm = 'ambient' } = args;
-    
+
+    if (!name || name.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Vibe name is required. Please provide a name for the vibe.`,
+          },
+        ],
+      };
+    }
+
+    if (!energy || energy.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Energy type is required. Please specify an energy: calm, intense, chaotic, focused, or expansive.`,
+          },
+        ],
+      };
+    }
+
+    if (this.vibes.has(name)) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `⚠️ Vibe "${name}" already exists. Use a different name or pulse the existing vibe.`,
+          },
+        ],
+      };
+    }
+
     const vibe = {
       name,
       energy,
@@ -527,6 +683,17 @@ class LinesLoopsVibesServer {
   synchronize(args) {
     const { elements, master_rhythm = null, phase_offset = 0 } = args;
 
+    if (!elements || elements.length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ No elements provided for synchronization. Please specify at least one line, loop, or vibe to synchronize.`,
+          },
+        ],
+      };
+    }
+
     const syncData = {
       elements,
       master_rhythm,
@@ -538,7 +705,7 @@ class LinesLoopsVibesServer {
       const hasLine = this.lines.has(element);
       const hasLoop = this.loops.has(element);
       const hasVibe = this.vibes.has(element);
-      
+
       return {
         element,
         type: hasLine ? 'line' : hasLoop ? 'loop' : hasVibe ? 'vibe' : 'unknown',
@@ -546,11 +713,31 @@ class LinesLoopsVibesServer {
       };
     });
 
+    const validElements = syncResults.filter(r => r.synced);
+    const invalidElements = syncResults.filter(r => !r.synced);
+
+    if (validElements.length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ No valid elements found for synchronization.\n\nMissing elements: ${invalidElements.map(r => r.element).join(', ')}\n\nPlease create these elements first using create_line, create_loop, or create_vibe.`,
+          },
+        ],
+      };
+    }
+
+    let resultText = `🔗 Synchronizing ${validElements.length} elements\n\nMaster Rhythm: ${master_rhythm || 'Auto-detected'}\nPhase Offset: ${phase_offset}°\n\n${syncResults.map(r => `${r.synced ? '✅' : '❌'} ${r.element} (${r.type})`).join('\n')}\n\n${this.visualizeSyncPattern(validElements.length, phase_offset)}`;
+
+    if (invalidElements.length > 0) {
+      resultText += `\n\n⚠️ Warning: ${invalidElements.length} elements not found: ${invalidElements.map(r => r.element).join(', ')}`;
+    }
+
     return {
       content: [
         {
           type: 'text',
-          text: `🔗 Synchronizing ${elements.length} elements\n\nMaster Rhythm: ${master_rhythm || 'Auto-detected'}\nPhase Offset: ${phase_offset}°\n\n${syncResults.map(r => `${r.synced ? '✅' : '❌'} ${r.element} (${r.type})`).join('\n')}\n\n${this.visualizeSyncPattern(elements.length, phase_offset)}`,
+          text: resultText,
         },
       ],
     };
@@ -559,21 +746,64 @@ class LinesLoopsVibesServer {
   composeRhythm(args) {
     const { name, components, tempo = 120 } = args;
 
+    if (!name || name.trim().length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Rhythm name is required. Please provide a name for the composed rhythm.`,
+          },
+        ],
+      };
+    }
+
+    if (!components || components.length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ No components provided for rhythm composition. Please specify at least one component with element and weight.`,
+          },
+        ],
+      };
+    }
+
+    // Validate components
+    const validComponents = components.filter(c => c.element && typeof c.weight === 'number');
+    const invalidComponents = components.filter(c => !c.element || typeof c.weight !== 'number');
+
+    if (validComponents.length === 0) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ No valid components found. Each component must have an 'element' (string) and 'weight' (number).\n\nInvalid components: ${invalidComponents.length}`,
+          },
+        ],
+      };
+    }
+
     const composition = {
       name,
-      components,
+      components: validComponents,
       tempo,
       created_at: new Date().toISOString(),
     };
 
-    const rhythmPattern = this.generateCompositeRhythm(components);
+    const rhythmPattern = this.generateCompositeRhythm(validComponents);
     this.rhythms.set(`composed_${name}`, rhythmPattern);
+
+    let resultText = `🎼 Rhythm composed: "${name}"\n\nTempo: ${tempo} BPM\nComponents:\n${validComponents.map(c => `  • ${c.element}: ${(c.weight * 100).toFixed(0)}%`).join('\n')}\n\n${this.visualizeCompositeRhythm(validComponents)}\n\nComposite rhythm created and available for use.`;
+
+    if (invalidComponents.length > 0) {
+      resultText += `\n\n⚠️ Warning: ${invalidComponents.length} invalid components were skipped.`;
+    }
 
     return {
       content: [
         {
           type: 'text',
-          text: `🎼 Rhythm composed: "${name}"\n\nTempo: ${tempo} BPM\nComponents:\n${components.map(c => `  • ${c.element}: ${(c.weight * 100).toFixed(0)}%`).join('\n')}\n\n${this.visualizeCompositeRhythm(components)}\n\nComposite rhythm created and available for use.`,
+          text: resultText,
         },
       ],
     };
@@ -810,7 +1040,7 @@ class LinesLoopsVibesServer {
   visualizeSystemRhythm(timeWindow) {
     let rhythm = '🎵 SYSTEM RHYTHM (next ' + timeWindow + ' beats):\n';
     rhythm += '┌' + '─'.repeat(timeWindow * 2) + '┐\n';
-    
+
     const types = ['Lines', 'Loops', 'Vibes'];
     types.forEach(type => {
       rhythm += '│';
@@ -819,9 +1049,228 @@ class LinesLoopsVibesServer {
       }
       rhythm += '│ ' + type + '\n';
     });
-    
+
     rhythm += '└' + '─'.repeat(timeWindow * 2) + '┘\n';
     return rhythm;
+  }
+
+  // Data Persistence Methods
+  async ensureDataDir() {
+    try {
+      await fs.mkdir(this.dataDir, { recursive: true });
+    } catch (error) {
+      console.error('Failed to create data directory:', error);
+    }
+  }
+
+  mapToObj(map) {
+    return Object.fromEntries(map);
+  }
+
+  objToMap(obj) {
+    return new Map(Object.entries(obj || {}));
+  }
+
+  async saveData(args) {
+    if (!this.persistenceEnabled) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Data persistence is disabled. Set LLV_PERSISTENCE=true to enable.`,
+          },
+        ],
+      };
+    }
+
+    try {
+      await this.ensureDataDir();
+
+      const filename = args.filename || 'llv-session';
+      const filepath = join(this.dataDir, `${filename}.json`);
+
+      const data = {
+        timestamp: new Date().toISOString(),
+        lines: this.mapToObj(this.lines),
+        loops: this.mapToObj(this.loops),
+        vibes: this.mapToObj(this.vibes),
+        contexts: this.mapToObj(this.contexts),
+        version: '1.0.0',
+      };
+
+      await fs.writeFile(filepath, JSON.stringify(data, null, 2));
+
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `💾 Data saved successfully!\n\nFile: ${filepath}\nLines: ${this.lines.size}\nLoops: ${this.loops.size}\nVibes: ${this.vibes.size}\nContexts: ${this.contexts.size}\n\nTimestamp: ${data.timestamp}`,
+          },
+        ],
+      };
+    } catch (error) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Failed to save data: ${error.message}`,
+          },
+        ],
+      };
+    }
+  }
+
+  async loadData(filename = 'llv-session') {
+    if (!this.persistenceEnabled) {
+      return;
+    }
+
+    try {
+      const filepath = join(this.dataDir, `${filename}.json`);
+      const data = JSON.parse(await fs.readFile(filepath, 'utf8'));
+
+      this.lines = this.objToMap(data.lines);
+      this.loops = this.objToMap(data.loops);
+      this.vibes = this.objToMap(data.vibes);
+      this.contexts = this.objToMap(data.contexts);
+
+      // Regenerate rhythms for loaded data
+      this.rhythms.clear();
+      for (const [name, line] of this.lines) {
+        this.rhythms.set(`line_${name}`, this.generateRhythm(line.rhythm));
+      }
+      for (const [name, loop] of this.loops) {
+        this.rhythms.set(`loop_${name}`, this.generateRhythm(loop.rhythm));
+      }
+      for (const [name, vibe] of this.vibes) {
+        this.rhythms.set(`vibe_${name}`, this.generateRhythm(vibe.rhythm));
+      }
+
+      console.error(`Loaded data from ${filepath}: ${this.lines.size} lines, ${this.loops.size} loops, ${this.vibes.size} vibes`);
+    } catch (error) {
+      if (error.code !== 'ENOENT') {
+        console.error('Failed to load data:', error);
+      }
+    }
+  }
+
+  async loadDataTool(args) {
+    if (!this.persistenceEnabled) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Data persistence is disabled. Set LLV_PERSISTENCE=true to enable.`,
+          },
+        ],
+      };
+    }
+
+    try {
+      const filename = args.filename || 'llv-session';
+      const filepath = join(this.dataDir, `${filename}.json`);
+      const merge = args.merge || false;
+
+      let originalCounts = {};
+      if (merge) {
+        originalCounts = {
+          lines: this.lines.size,
+          loops: this.loops.size,
+          vibes: this.vibes.size,
+          contexts: this.contexts.size,
+        };
+      }
+
+      const data = JSON.parse(await fs.readFile(filepath, 'utf8'));
+
+      if (merge) {
+        // Merge data instead of replacing
+        for (const [name, line] of Object.entries(data.lines || {})) {
+          if (!this.lines.has(name)) {
+            this.lines.set(name, line);
+            this.rhythms.set(`line_${name}`, this.generateRhythm(line.rhythm));
+          }
+        }
+        for (const [name, loop] of Object.entries(data.loops || {})) {
+          if (!this.loops.has(name)) {
+            this.loops.set(name, loop);
+            this.rhythms.set(`loop_${name}`, this.generateRhythm(loop.rhythm));
+          }
+        }
+        for (const [name, vibe] of Object.entries(data.vibes || {})) {
+          if (!this.vibes.has(name)) {
+            this.vibes.set(name, vibe);
+            this.rhythms.set(`vibe_${name}`, this.generateRhythm(vibe.rhythm));
+          }
+        }
+        for (const [name, context] of Object.entries(data.contexts || {})) {
+          if (!this.contexts.has(name)) {
+            this.contexts.set(name, context);
+          }
+        }
+      } else {
+        // Replace all data
+        this.lines = this.objToMap(data.lines);
+        this.loops = this.objToMap(data.loops);
+        this.vibes = this.objToMap(data.vibes);
+        this.contexts = this.objToMap(data.contexts);
+
+        // Regenerate rhythms
+        this.rhythms.clear();
+        for (const [name, line] of this.lines) {
+          this.rhythms.set(`line_${name}`, this.generateRhythm(line.rhythm));
+        }
+        for (const [name, loop] of this.loops) {
+          this.rhythms.set(`loop_${name}`, this.generateRhythm(loop.rhythm));
+        }
+        for (const [name, vibe] of this.vibes) {
+          this.rhythms.set(`vibe_${name}`, this.generateRhythm(vibe.rhythm));
+        }
+      }
+
+      let resultText = `📂 Data loaded successfully!\n\nFile: ${filepath}\nLoaded: ${data.timestamp}\n`;
+
+      if (merge) {
+        const newCounts = {
+          lines: this.lines.size - originalCounts.lines,
+          loops: this.loops.size - originalCounts.loops,
+          vibes: this.vibes.size - originalCounts.vibes,
+          contexts: this.contexts.size - originalCounts.contexts,
+        };
+        resultText += `\nMerged:\n• +${newCounts.lines} lines\n• +${newCounts.loops} loops\n• +${newCounts.vibes} vibes\n• +${newCounts.contexts} contexts`;
+      } else {
+        resultText += `\nCurrent state:\n• ${this.lines.size} lines\n• ${this.loops.size} loops\n• ${this.vibes.size} vibes\n• ${this.contexts.size} contexts`;
+      }
+
+      return {
+        content: [
+          {
+            type: 'text',
+            text: resultText,
+          },
+        ],
+      };
+    } catch (error) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `❌ Failed to load data: ${error.message}`,
+          },
+        ],
+      };
+    }
+  }
+
+  // Auto-save after create operations
+  async autoSave() {
+    if (this.persistenceEnabled) {
+      try {
+        await this.saveData({});
+      } catch (error) {
+        console.error('Auto-save failed:', error);
+      }
+    }
   }
 
   async run() {
