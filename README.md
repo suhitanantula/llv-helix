@@ -3,10 +3,10 @@
 > **"In the convergence of artificial intelligence and human creativity lies The Helix Moment—where strategic intelligence becomes code."**
 > — **Suhit Anantula**, AI Transformation Architect
 
-[![The Helix Moment][image-1]][1]
-[![npm version][image-2]][2]
-[![MCP Compatible][image-3]][3]
-[![License: MIT][image-4]][4]
+[![The Helix Moment](https://img.shields.io/badge/%F0%9F%8C%80-The%20Helix%20Moment-purple)](https://www.suhitanantula.com/)
+[![npm version](https://badge.fury.io/js/llv-helix.svg)](https://www.npmjs.com/package/llv-helix)
+[![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue.svg)](https://modelcontextprotocol.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Strategic Intelligence as Code** | **From The Helix Moment** | **20+ Years of Strategy Design**
 
@@ -25,10 +25,10 @@
 - **Innovator**: Open-source creativity operating system architect
 
 ### 💫 **Your AI Transformation Journey Starts Here**
-- 🎯 **[Free Strategy Discovery Call][5]** - Personal AI transformation consultation
-- 📝 **[Theory of the Business][6]** - Weekly strategic insights
-- 🌐 **[Strategy Hub][7]** - Deep dive resources
-- 💼 **[Connect on LinkedIn][8]** - Join the conversation
+- 🎯 **[Free Strategy Discovery Call](https://www.suhitanantula.com/)** - Personal AI transformation consultation
+- 📝 **[Theory of the Business](https://www.theoryofthebusiness.com/)** - Weekly strategic insights
+- 🌐 **[Strategy Hub](https://insights.suhitanantula.com/)** - Deep dive resources
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/suhitanantula/)** - Join the conversation
 
 ---
 
@@ -146,27 +146,37 @@ npm run demo  # Experience The Helix Moment
 
 ### **Step 2: Add to Claude (Choose Your Platform)**
 
-#### **Claude Desktop** (Simplest)
-```bash
-# 1. Open config file
-open ~/Library/Application\ Support/Claude/claude_desktop_config.json
+#### **Claude Desktop** (Recommended - Full functionality)
+1. **Open your Claude Desktop config file:**
+   2. **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+   3. **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+   4. **Linux**: `~/.config/Claude/claude_desktop_config.json`
 
-# 2. Add this to mcpServers section:
-"llv-helix": {
-  "command": "npx",
-  "args": ["-y", "llv-helix"],
-  "env": {
-    "LLV_PERSISTENCE": "true"
+2. **Add llv-helix to the `mcpServers` section:**
+```json
+{
+  "mcpServers": {
+    "llv-helix": {
+      "command": "npx",
+      "args": ["-y", "llv-helix"],
+      "env": {
+        "LLV_PERSISTENCE": "true"
+      }
+    }
   }
 }
-
-# 3. Restart Claude Desktop
 ```
+
+3. **🔄 Restart Claude Desktop** - This is required for MCP changes to take effect
+
+> **✅ Success**: You'll see "llv-helix" in your available tools within Claude Desktop
 
 #### **Claude Code**
 ```bash
 claude mcp add llv npx -- llv-helix
 ```
+
+> **ℹ️ Note**: Claude Code integration may have tool exposure delays. For immediate full functionality, use Claude Desktop.
 
 ### **Step 3: Create Your First Helix Flow**
 ```bash
@@ -222,10 +232,10 @@ The Helix Framework grows stronger with every practitioner. **Your experience ma
 - **🤝 Want to contribute?** Join the open-source community
 
 ### 📢 **Connect & Share:**
-- 💬 **[GitHub Discussions][9]** - Community insights
+- 💬 **[GitHub Discussions](https://github.com/suhitanantula/llv-helix/discussions)** - Community insights
 - 🐦 **Share on Twitter** with #HelixMoment and tag @suhitanantula
-- 💼 **[LinkedIn][10]** - Professional insights exchange
-- 📧 **[Direct Feedback][11]** - Personal transformation stories
+- 💼 **[LinkedIn](https://www.linkedin.com/in/suhitanantula/)** - Professional insights exchange
+- 📧 **[Direct Feedback](https://www.suhitanantula.com/)** - Personal transformation stories
 
 ---
 
@@ -278,7 +288,7 @@ export LLV_LOG_LEVEL="info"
 - 📈 **Strategic Implementation** - Turn insights into business outcomes
 - 👥 **Executive Leadership** - Navigate transformation with confidence
 
-**[Book Your Strategy Discovery Call][12]** - Let's design your Helix Moment
+**[Book Your Strategy Discovery Call](https://www.suhitanantula.com/)** - Let's design your Helix Moment
 
 ---
 
@@ -315,9 +325,9 @@ Share your success story and get featured in our community showcase!
 
 ### 📖 **Essential Helix Resources:**
 1. **[The Helix Moment](https://www.thehelixmoment.com/)** - Complete AI transformation methodology
-2. **[15-Point Action Plan][14]** - Practical AI integration steps
-3. **[Theory of the Business][15]** - Weekly strategic insights
-4. **[Strategy Discovery][16]** - Personal consultation
+2. **[15-Point Action Plan](https://www.suhitanantula.com/)** - Practical AI integration steps
+3. **[Theory of the Business](https://www.theoryofthebusiness.com/)** - Weekly strategic insights
+4. **[Strategy Discovery](https://www.suhitanantula.com/)** - Personal consultation
 
 ### 🛠️ **Technical Documentation:**
 - [Installation Guide](INSTALLATION.md) - Complete setup instructions
@@ -357,10 +367,10 @@ git push origin feature/your-helix-contribution
 Whether you're exploring systematic creativity or ready for complete AI transformation, your journey starts here.
 
 ### 🚀 **Take Your Next Step:**
-- **🎯 [Book Strategy Discovery][21]** - Personal AI transformation consultation
-- **💬 [Join Community][22]** - Connect with other Helix practitioners
-- **📧 [Subscribe to Insights][23]** - Weekly strategic intelligence
-- **🛠️ [Start Building][24]** - Install and create your first Helix flow
+- **🎯 [Book Strategy Discovery](https://www.suhitanantula.com/)** - Personal AI transformation consultation
+- **💬 [Join Community](https://github.com/suhitanantula/llv-helix/discussions)** - Connect with other Helix practitioners
+- **📧 [Subscribe to Insights](https://www.theoryofthebusiness.com/)** - Weekly strategic intelligence
+- **🛠️ [Start Building](INSTALLATION.md)** - Install and create your first Helix flow
 
 ---
 
@@ -387,57 +397,17 @@ Every month we feature the most innovative uses of The Helix Framework:
 - 🌍 Global impact stories from different industries
 
 ### 📬 **Stay in The Helix Loop**
-- 📧 **[Theory of the Business Newsletter][25]** - Weekly insights
-- 💬 **[Community Discord][26]** - Daily discussions
+- 📧 **[Theory of the Business Newsletter](https://www.theoryofthebusiness.com/)** - Weekly insights
+- 💬 **[Community Discord](https://github.com/suhitanantula/llv-helix/discussions)** - Daily discussions
 - 🎥 **YouTube Channel** - Video tutorials and case studies (coming soon!)
 - 🎙️ **Helix Podcast** - Interviews with practitioners (launching Q1 2025)
 
 ---
 
-*Built with 🧠 by [Suhit Anantula][27] | Inspired by [The Helix Moment](https://www.thehelixmoment.com/) | Powered by Strategic Intelligence*
+*Built with 🧠 by [Suhit Anantula](https://www.suhitanantula.com/) | Inspired by [The Helix Moment](https://www.thehelixmoment.com/) | Powered by Strategic Intelligence*
 
 **The Helix Moment is here. Your story could inspire the next breakthrough.** 🌀✨
 
-[![Star on GitHub][image-5]][29]
-[![Follow @suhitanantula][image-6]][30]
-[![Connect on LinkedIn][image-7]][31]
-
-[1]:	https://www.suhitanantula.com/
-[2]:	https://www.npmjs.com/package/llv-helix
-[3]:	https://modelcontextprotocol.io
-[4]:	https://opensource.org/licenses/MIT
-[5]:	https://www.suhitanantula.com/
-[6]:	https://www.theoryofthebusiness.com/
-[7]:	https://insights.suhitanantula.com/
-[8]:	https://www.linkedin.com/in/suhitanantula/
-[9]:	https://github.com/suhitanantula/llv-helix/discussions
-[10]:	https://www.linkedin.com/in/suhitanantula/
-[11]:	https://www.suhitanantula.com/
-[12]:	https://www.suhitanantula.com/
-[13]:	https://www.suhitanantula.com/
-[14]:	https://www.suhitanantula.com/
-[15]:	https://www.theoryofthebusiness.com/
-[16]:	https://www.suhitanantula.com/
-[17]:	INSTALLATION.md
-[18]:	docs/api.md
-[19]:	examples/
-[20]:	CONTRIBUTING.md
-[21]:	https://www.suhitanantula.com/
-[22]:	https://github.com/suhitanantula/llv-helix/discussions
-[23]:	https://www.theoryofthebusiness.com/
-[24]:	INSTALLATION.md
-[25]:	https://www.theoryofthebusiness.com/
-[26]:	https://github.com/suhitanantula/llv-helix/discussions
-[27]:	https://www.suhitanantula.com/
-[28]:	https://www.suhitanantula.com/
-[29]:	https://github.com/suhitanantula/llv-helix
-[30]:	https://twitter.com/suhitanantula
-[31]:	https://www.linkedin.com/in/suhitanantula/
-
-[image-1]:	https://img.shields.io/badge/%F0%9F%8C%80-The%20Helix%20Moment-purple
-[image-2]:	https://badge.fury.io/js/llv-helix.svg
-[image-3]:	https://img.shields.io/badge/MCP-Compatible-blue.svg
-[image-4]:	https://img.shields.io/badge/License-MIT-yellow.svg
-[image-5]:	https://img.shields.io/github/stars/suhitanantula/llv-helix?style=social
-[image-6]:	https://img.shields.io/twitter/follow/suhitanantula?style=social
-[image-7]:	https://img.shields.io/badge/LinkedIn-Connect-blue
+[![Star on GitHub](https://img.shields.io/github/stars/suhitanantula/llv-helix?style=social)](https://github.com/suhitanantula/llv-helix)
+[![Follow @suhitanantula](https://img.shields.io/twitter/follow/suhitanantula?style=social)](https://twitter.com/suhitanantula)
+[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/suhitanantula/)
