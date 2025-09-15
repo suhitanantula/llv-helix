@@ -56,9 +56,10 @@
 
   🧠 Rhythm Engineering
 
-  Prompt engineering → What you askContext engineering → What you provideRhythm engineering → How you think together
+Prompt → Context → Rhythm
+"What do I ask?" → "What do I give it?" → "How do we think together?"
 
-  This lets you orchestrate AI's cognitive frequencies—moving between deep strategy, execution, crisis response, and innovation on demand.
+This lets you orchestrate AI's cognitive frequencies—moving between deep strategy, execution, crisis response, and innovation on demand.
 
   LLV = Lines for structure, Loops for iteration, Vibes for emergence.The Hz dial sets their cognitive mix.
 
