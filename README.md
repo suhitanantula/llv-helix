@@ -115,6 +115,14 @@ Open a PR or start a discussion.
 	•	💼 LinkedIn – connect and share use cases
 	•	🐦 X / Twitter – updates and experiments
 
+
+ More
+
+  - Documentation: ENHANCED.md
+  - Contributing: CONTRIBUTING.md
+  - Creator: https://www.suhitanantula.com/
+  - Book: https://www.thehelixmoment.com/
+
 ⸻
 
 MIT Licensed. Built for Co-Intelligence.
